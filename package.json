@@ -1,0 +1,16 @@
+{
+  "name": "www.champix.team",
+  "homepage": "https://github.com/Bogdan-K-A/champix.team",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "deploy": "gh-pages -d ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "gh-pages": "^6.3.0"
+  }
+}
