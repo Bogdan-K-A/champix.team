@@ -5,7 +5,6 @@ TemplateMo 548 Training Studio
 https://templatemo.com/tm-548-training-studio
 
 */
-
 /* ---------------------------------------------
 Table of contents
 ------------------------------------------------
@@ -98,6 +97,15 @@ figcaption {
   outline: 0;
 }
 
+/* ROOT */
+:root {
+  --orande: #ed563b;
+  --champixColor1: #00eed1;
+  --champixColor2: #531b7b;
+  --champixColor3: #9bf100;
+  --champixColor4: #ff9f35;
+}
+
 .clearfix:after {
   content: '.';
   display: block;
@@ -187,12 +195,12 @@ body {
 }
 
 ::selection {
-  background: #ed563b;
+  background: var(--orange);
   color: #fff;
 }
 
 ::-moz-selection {
-  background: #ed563b;
+  background: var(--orange);
   color: #fff;
 }
 
@@ -231,7 +239,7 @@ body {
 
 .section-heading h2 em {
   font-style: normal;
-  color: #ed563b;
+  color: var(--orange);
 }
 
 .section-heading img {
@@ -250,7 +258,7 @@ body {
   display: inline-block;
   font-size: 15px;
   padding: 12px 20px;
-  background-color: #ed563b;
+  background-color: var(--orange);
   color: #fff;
   text-align: center;
   font-weight: 400;
@@ -296,11 +304,11 @@ header
 } */
 
 .background-header .main-nav .nav li:hover a {
-  color: #ed563b !important;
+  color: var(--orange) !important;
 }
 
 .background-header .nav li a.active {
-  color: #ed563b !important;
+  color: var(--orange) !important;
 }
 
 .header-area {
@@ -318,12 +326,22 @@ header
 }
 
 .header-area .main-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   min-height: 80px;
   background: transparent;
 }
 
+.logo-box {
+  width: auto !important;
+  height: auto !important;
+}
+
 .header-area .main-nav .logo {
-  line-height: 80px;
+  display: inline-block;
+
+  /* line-height: 80px;
   color: #fff;
   font-size: 32px;
   font-weight: 800;
@@ -332,18 +350,29 @@ header
   -webkit-transition: all 0.3s ease 0s;
   -moz-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s; */
+}
+.header-area .main-nav .logo img {
+  width: 200px !important;
+  height: auto !important;
 }
 
-.header-area .main-nav .logo em {
+/* .header-area .main-nav .logo em {
   font-style: normal;
-  color: #ed563b;
+  color: var(--orange);
   font-weight: 900;
+} */
+
+.img-hidden {
+  display: none;
+}
+.img-block {
+  display: block;
 }
 
 .header-area .main-nav .nav {
   float: right;
-  margin-top: 27px;
+  /* margin-top: 27px; */
   margin-right: 0px;
   background-color: transparent;
   -webkit-transition: all 0.3s ease 0s;
@@ -355,8 +384,8 @@ header
 }
 
 .header-area .main-nav .nav li {
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .header-area .main-nav .nav li a {
@@ -394,7 +423,7 @@ header
   display: inline-block;
   font-size: 13px;
   padding: 11px 17px;
-  background-color: #ed563b;
+  background-color: var(--orange);
   color: #fff;
   text-align: center;
   font-weight: 400;
@@ -412,18 +441,18 @@ header
 
 .header-area .main-nav .nav li:hover a,
 .header-area .main-nav .nav li a.active {
-  color: #ed563b !important;
+  color: var(--orange) !important;
   opacity: 1;
 }
 
 .header-area .main-nav .dropdown-menu li a.active {
-  color: #ed563b !important;
+  color: var(--orange) !important;
   opacity: 1;
 }
 
 .background-header .main-nav .nav li:hover a,
 .background-header .main-nav .nav li a.active {
-  color: #ed563b !important;
+  color: var(--orange) !important;
   opacity: 1;
 }
 
@@ -543,17 +572,17 @@ header
 }
 
 .header-area.header-sticky .nav {
-  margin-top: 20px !important;
+  /* margin-top: 20px !important; */
 }
 
 .header-area.header-sticky .nav li a.active {
-  color: #ed563b;
+  color: var(--orange);
 }
 
 @media (max-width: 1200px) {
   .header-area .main-nav .nav li {
-    padding-left: 12px;
-    padding-right: 12px;
+    padding-left: 8px;
+    padding-right: 8px;
   }
   .header-area .main-nav:before {
     display: none;
@@ -566,7 +595,7 @@ header
   }
   .header-area.header-sticky .nav li a:hover,
   .header-area.header-sticky .nav li a.active {
-    color: #ed563b !important;
+    color: var(--orange) !important;
     opacity: 1;
   }
   .header-area {
@@ -604,19 +633,19 @@ header
   }
   .header-area .main-nav .nav li:last-child {
     width: 100%;
-    background-color: #ed563b;
+    background-color: var(--orange);
     color: #fff;
   }
   .header-area .main-nav .nav li:last-child a {
-    background-color: #ed563b !important;
+    background-color: var(--orange) !important;
   }
   .header-area .main-nav .nav li:last-child a:hover,
   .header-area .main-nav .nav li:last-child:hover a {
-    background-color: #ed563b !important;
+    background-color: var(--orange) !important;
     color: #fff !important;
   }
   .header-area.header-sticky .nav {
-    margin-top: 80px !important;
+    margin-top: 15px !important;
   }
   .header-area .main-nav .nav li {
     width: 100%;
@@ -638,7 +667,7 @@ header
   }
   .header-area .main-nav .nav li a:hover {
     background: #eee !important;
-    color: #ed563b !important;
+    color: var(--orange) !important;
   }
   .header-area .main-nav .nav li.submenu ul {
     position: relative;
@@ -742,7 +771,8 @@ banner
 
 .main-banner .caption h2 em {
   font-style: normal;
-  color: #ed563b;
+  color: #00eed1;
+  /* color: var(--orange); */
   font-weight: 900;
 }
 
@@ -764,6 +794,8 @@ features
 .feature-item .left-icon img {
   float: left;
   margin-right: 30px;
+  width: 80px;
+  height: auto;
 }
 
 .feature-item .right-content {
@@ -785,7 +817,7 @@ features
   display: inline-block;
   font-size: 13px;
   text-transform: uppercase;
-  color: #ed563b;
+  color: var(--orange);
   font-weight: 500;
 }
 
@@ -814,7 +846,7 @@ subscribe
 
 .cta-content h2 em {
   font-style: normal;
-  color: #ed563b;
+  color: var(--orange);
 }
 
 .cta-content p {
@@ -870,7 +902,7 @@ Our Classes
   font-size: 19px;
   letter-spacing: 0.5px;
   font-weight: 600;
-  background-color: #ed563b;
+  background-color: var(--orange);
 }
 #tabs .main-rounded-button a:hover {
   background-color: #f9735b;
@@ -886,7 +918,7 @@ Our Classes
   border-bottom: none;
 }
 #tabs ul .ui-tabs-active a {
-  color: #ed563b;
+  color: var(--orange);
 }
 #tabs ul .ui-tabs-active span {
   color: #1e1e1e;
@@ -1003,7 +1035,7 @@ schedule
 }
 #schedule .filters ul li.active,
 #schedule .filters ul li:hover {
-  color: #ed563b;
+  color: var(--orange);
 }
 #schedule .filters-content {
   margin-top: 50px;
@@ -1040,7 +1072,7 @@ trainers
 #trainers .trainer-item span {
   font-size: 13px;
   font-weight: 500;
-  color: #ed563b;
+  color: var(--orange);
   display: inline-block;
   margin-top: 25px;
   margin-bottom: 10px;
@@ -1073,7 +1105,7 @@ trainers
 }
 
 #trainers .trainer-item ul.social-icons li a:hover {
-  color: #ed563b;
+  color: var(--orange);
 }
 
 /* 
@@ -1144,7 +1176,7 @@ contact
   display: inline-block;
   font-size: 13px;
   padding: 11px 17px;
-  background-color: #ed563b;
+  background-color: var(--orange);
   color: #fff;
   text-align: center;
   font-weight: 400;
@@ -1176,11 +1208,11 @@ footer p {
 
 footer p a {
   cursor: pointer;
-  color: #ed563b;
+  color: var(--orange);
 }
 
 footer p a:hover {
-  color: #ed563b;
+  color: var(--orange);
 }
 
 /* 
@@ -1291,7 +1323,7 @@ responsive
 
 @media (max-width: 992px) {
   .main-banner .caption h2 {
-    font-size: 64px;
+    font-size: 3rem;
   }
   #features {
     margin-bottom: 110px;
@@ -1336,7 +1368,11 @@ responsive
 }
 
 .phoneMobile:focus {
-  color: #ed563b;
+  color: var(--orange);
+}
+
+.colorText {
+  color: var(--orange);
 }
 
 @media (min-width: 765px) {
@@ -1346,13 +1382,17 @@ responsive
 }
 
 @media (max-width: 991px) and (min-width: 765px) {
+  .header-area .main-nav .logo {
+    width: 150px !important;
+  }
+
   .phoneMobile {
     display: none;
   }
 
-  .header-area .main-nav .logo {
+  /* .header-area .main-nav .logo {
     font-size: 24px;
-  }
+  } */
 
   .header-area .main-nav .nav li a {
     font-size: 9px;
@@ -1364,8 +1404,21 @@ responsive
 }
 
 @media (max-width: 765px) and (min-width: 0px) {
+  .header-area .main-nav {
+    display: block !important;
+  }
+
   .hidden,
   .nav-item {
     display: none;
+  }
+
+  .logo-box {
+  }
+
+  .header-area .main-nav .logo {
+    width: 150px !important;
+    margin-top: 20px;
+    margin-right: 100%;
   }
 }
