@@ -12,9 +12,10 @@ const alertMessage = document.getElementById('alert'); //обращается п
 document.getElementById('order_form').addEventListener('submit', function (e) {
   e.preventDefault();
   // Тіло повідомлення
-  let message = `<b>Заявка з сайту!</b>\n`;
-  message += `<b>Ім'я: </b> ${this.name.value}\n`;
-  message += `<b>телефон: </b> ${this.phone.value}`;
+  let message = `<b>Заявка с сайта!</b>\n`;
+  message += `<b>Имя: </b> ${this.name.value}\n`;
+  message += `<b>Телефон: </b> ${this.phone.value}\n`;
+  message += `<b>Вопрос: </b> ${this.message.value}`;
 
   // Запит
   axios
@@ -24,6 +25,7 @@ document.getElementById('order_form').addEventListener('submit', function (e) {
       text: message,
     })
     .then((res) => {
+      // страница благодарности
       this.name.value = '';
       this.phone.value = '';
       alertMessage.innerHTML = 'Ваша заявка відправлена! Дякуємо!';
@@ -31,6 +33,7 @@ document.getElementById('order_form').addEventListener('submit', function (e) {
       alertMessage.style.display = 'block';
     })
     .catch((err) => {
+      // ошибка
       this.name.value = '';
       this.phone.value = '';
       alertMessage.innerHTML = 'Щось пішло не так!';
