@@ -101,7 +101,7 @@
         var refElement = $(href);
         if (
           refElement.length &&
-          refElement.position().top <= scrollPos &&
+          refElement.position().top - 5 <= scrollPos &&
           refElement.position().top + refElement.height() > scrollPos
         ) {
           $('.nav ul li a').removeClass('active');

@@ -99,7 +99,7 @@ figcaption {
 
 /* ROOT */
 :root {
-  --orande: #ed563b;
+  --orange: #fd7e14;
   --champixColor1: #00eed1;
   --champixColor2: #531b7b;
   --champixColor3: #9bf100;
@@ -829,7 +829,7 @@ subscribe
 
 #call-to-action {
   padding: 120px 0px;
-  background-image: url(../images/cta-bg.jpg);
+  background-image: url(../images/cta-bg11.jpg);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -956,7 +956,7 @@ schedule
 
 #schedule {
   padding: 0px 0px 140px 0px;
-  background-image: url(../images/schedule-bg.jpg);
+  background-image: url(../images/schedule-bg1.jpg);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1123,8 +1123,9 @@ contact
 }
 
 #contact-us .contact-form {
+  width: 100%;
   padding: 80px;
-  background-image: url(../images/contact-bg.jpg);
+  background-image: url(../images/cta-bg11.jpg);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1374,6 +1375,39 @@ responsive
 .colorText {
   color: var(--orange);
 }
+
+.marginForm {
+  margin: 0 auto;
+}
+
+.tabs-img {
+  width: 50px;
+  height: 50px;
+}
+
+.content-list {
+  margin-bottom: 25px !important;
+}
+
+.content-list .list-item {
+  margin: 0 !important;
+}
+
+.content-list .list-item p {
+  margin: 0 0 0 25px;
+}
+
+.content-list .list-item::before {
+  display: inline-block;
+  content: '';
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--orange);
+  margin-right: 10px;
+}
+
+/* ----------------------------- МОИ МЕДИА СТИЛИ ---------------------------- */
 
 @media (min-width: 765px) {
   .phoneMobile {

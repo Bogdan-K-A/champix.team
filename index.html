@@ -20,12 +20,15 @@ https://templatemo.com/tm-548-training-studio
 -->
     <!-- Additional CSS Files -->
     <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css" />
-    <link rel="stylesheet" type="text/css" href="assets/css/custom.css" />
     <link rel="stylesheet" type="text/css" href="assets/css/modern-normalize.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/custom.css" />
 
     <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.css" />
 
     <link rel="stylesheet" href="assets/css/templatemo-training-studio.css" />
+
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   </head>
@@ -53,7 +56,7 @@ https://templatemo.com/tm-548-training-studio
               <!-- ***** Logo Start ***** -->
               <span class="logo-box">
                 <a class="phoneMobile" href="tel:+491748547762">+49 1748547762</a>
-                <a href="index.html" class="logo">
+                <a href="#top" class="logo">
                   <img class="img-block" src="assets/images/logo/logo-1.png" alt="Champix" />
                   <img class="img-hidden" src="assets/images/logo/logo-5.png" alt="Champix" />
                 </a>
@@ -63,9 +66,9 @@ https://templatemo.com/tm-548-training-studio
               <!-- ***** Menu Start ***** -->
               <ul class="nav">
                 <li class="scroll-to-section"><a href="#top" class="active">Головна</a></li>
-                <li class="scroll-to-section"><a href="#features">Галерея</a></li>
-                <li class="scroll-to-section"><a href="#our-classes">Про нас</a></li>
+                <li class="scroll-to-section"><a href="#call-to-action">Про нас</a></li>
                 <li class="scroll-to-section"><a href="#schedule">Розклад</a></li>
+                <li class="scroll-to-section"><a href="#gallery">Галерея</a></li>
                 <li class="scroll-to-section"><a href="#contact-us">Контакти</a></li>
                 <li class="scroll-to-section hidden">
                   <a class="phone" href="tel:+491748547762">+49 1748547762</a>
@@ -232,11 +235,11 @@ https://templatemo.com/tm-548-training-studio
           <div class="col-lg-10 offset-lg-1">
             <div class="cta-content">
               <h2>
-                Не
-                <em>зволікай</em>
-                , починай
+                Про
+                <em>нас</em>
+                <!-- , починай
                 <em>сьогодні</em>
-                !
+                ! -->
               </h2>
               <p>
                 Кожен з батьків хоче бачити свою дитину сильною та успішною. У
@@ -260,13 +263,12 @@ https://templatemo.com/tm-548-training-studio
           <div class="col-lg-6 offset-lg-3">
             <div class="section-heading">
               <h2>
-                Our
-                <em>Classes</em>
+                План
+                <em>тренувань</em>
               </h2>
               <img src="assets/images/line-dec.png" alt="" />
               <p>
-                Nunc urna sem, laoreet ut metus id, aliquet consequat magna. Sed viverra ipsum dolor, ultricies
-                fermentum massa consequat eu.
+                Ознайомтеся з нашим планом тренувань кожної групи, для досягнення найкращього результату вашої дитини.
               </p>
             </div>
           </div>
@@ -276,80 +278,153 @@ https://templatemo.com/tm-548-training-studio
             <ul>
               <li>
                 <a href="#tabs-1">
-                  <img src="assets/images/tabs-first-icon.png" alt="" />
-                  First Training Class
+                  <img class="tabs-img" src="assets/images/logo/logo-4.png" />
+                  Діти 4-6 років
                 </a>
               </li>
               <li>
                 <a href="#tabs-2">
-                  <img src="assets/images/tabs-first-icon.png" alt="" />
-                  Second Training Class
+                  <img class="tabs-img" src="assets/images/logo/logo-4.png" />
+                  Діти 8-10 років
                 </a>
               </li>
               <li>
                 <a href="#tabs-3">
-                  <img src="assets/images/tabs-first-icon.png" alt="" />
-                  Third Training Class
+                  <img class="tabs-img" src="assets/images/logo/logo-4.png" />
+                  Діти 10-12 років
                 </a>
               </li>
               <li>
                 <a href="#tabs-4">
-                  <img src="assets/images/tabs-first-icon.png" alt="" />
-                  Fourth Training Class
+                  <img class="tabs-img" src="assets/images/logo/logo-4.png" />
+                  Діти 12-14 років
                 </a>
               </li>
-              <div class="main-rounded-button"><a href="#">View All Schedules</a></div>
+              <div class="main-rounded-button"><a href="#schedule">Загальний розклад</a></div>
             </ul>
           </div>
           <div class="col-lg-8">
             <section class="tabs-content">
               <article id="tabs-1">
-                <img src="assets/images/training-image-01.jpg" alt="First Class" />
-                <h4>First Training Class</h4>
-                <p>
-                  Phasellus convallis mauris sed elementum vulputate. Donec posuere leo sed dui eleifend hendrerit. Sed
-                  suscipit suscipit erat, sed vehicula ligula. Aliquam ut sem fermentum sem tincidunt lacinia gravida
-                  aliquam nunc. Morbi quis erat imperdiet, molestie nunc ut, accumsan diam.
-                </p>
-                <div class="main-button">
-                  <a href="#">View Schedule</a>
-                </div>
+                <img src="assets/images/kids-img/img_4-6.jpg" />
+                <h4>Діти 4-6 років</h4>
+                <ul class="content-list">
+                  <li class="list-item">
+                    Перша частина
+                    <p>- загальна розминка</p>
+                  </li>
+                  <li class="list-item">
+                    Друга частина
+                    <p>- вправи з м'ячем</p>
+                    <p>- вправи з ударами</p>
+                  </li>
+                  <li class="list-item">
+                    Третя частина
+                    <p>- естафета</p>
+                  </li>
+                </ul>
+                <!-- <div class="main-button">
+                  <a href="#schedule">Дивитись розклад</a>
+                </div> -->
               </article>
+
               <article id="tabs-2">
-                <img src="assets/images/training-image-02.jpg" alt="Second Training" />
-                <h4>Second Training Class</h4>
-                <p>
-                  Integer dapibus, est vel dapibus mattis, sem mauris luctus leo, ac pulvinar quam tortor a velit.
-                  Praesent ultrices erat ante, in ultricies augue ultricies faucibus. Nam tellus nibh, ullamcorper at
-                  mattis non, rhoncus sed massa. Cras quis pulvinar eros. Orci varius natoque penatibus et magnis dis
-                  parturient montes, nascetur ridiculus mus.
-                </p>
-                <div class="main-button">
-                  <a href="#">View Schedule</a>
-                </div>
+                <img src="assets/images/kids-img/img_8-10.jpg" alt="Second Training" />
+                <h4>Діти 8-10 років</h4>
+                <ul class="content-list">
+                  <li class="list-item">
+                    Перша частина
+                    <p>- загальна розминка</p>
+                  </li>
+                  <li class="list-item">
+                    Друга частина
+                    <p>- cпеціальна розминка</p>
+                    <p>- імітація</p>
+                  </li>
+
+                  <li class="list-item">
+                    Третя частина
+                    <p>- розминка на корті</p>
+                  </li>
+                  <li class="list-item">
+                    Четверта частина
+                    <p>- Гра один з одним</p>
+                    <p>- Гра з корзиною</p>
+                  </li>
+                  <li class="list-item">
+                    П'ята частина
+                    <p>- Вправи на розслаблення</p>
+                  </li>
+                </ul>
+                <!-- <div class="main-button">
+                  <a href="#">Дивитись розклад</a>
+                </div> -->
               </article>
               <article id="tabs-3">
-                <img src="assets/images/training-image-03.jpg" alt="Third Class" />
-                <h4>Third Training Class</h4>
-                <p>
-                  Fusce laoreet malesuada rhoncus. Donec ultricies diam tortor, id auctor neque posuere sit amet.
-                  Aliquam pharetra, augue vel cursus porta, nisi tortor vulputate sapien, id scelerisque felis magna id
-                  felis. Proin neque metus, pellentesque pharetra semper vel, accumsan a neque.
-                </p>
-                <div class="main-button">
-                  <a href="#">View Schedule</a>
-                </div>
+                <img src="assets/images/kids-img/img_10-12.jpg" alt="Third Class" />
+                <h4>Діти 10-12 років</h4>
+                <ul class="content-list">
+                  <li class="list-item">
+                    Перша частина
+                    <p>- загальна розминка</p>
+                  </li>
+                  <li class="list-item">
+                    Друга частина
+                    <p>- cпеціальна розминка</p>
+                    <p>- імітація</p>
+                  </li>
+
+                  <li class="list-item">
+                    Третя частина
+                    <p>- розминка на корті</p>
+                  </li>
+                  <li class="list-item">
+                    Четверта частина
+                    <p>- гра один з одним</p>
+                    <p>- гра з корзиною</p>
+                  </li>
+                  <li class="list-item">
+                    П'ята частина
+                    <p>- Вправи на розслаблення</p>
+                  </li>
+                </ul>
+                <!-- <div class="main-button">
+                  <a href="#">Дивитись розклад</a>
+                </div> -->
               </article>
               <article id="tabs-4">
-                <img src="assets/images/training-image-04.jpg" alt="Fourth Training" />
-                <h4>Fourth Training Class</h4>
-                <p>
-                  Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aenean
-                  ultrices elementum odio ac tempus. Etiam eleifend orci lectus, eget venenatis ipsum commodo et.
-                </p>
-                <div class="main-button">
-                  <a href="#">View Schedule</a>
-                </div>
+                <img src="assets/images/kids-img/img_12-14copi.jpg" alt="Fourth Training" />
+                <h4>Діти 12-14 років</h4>
+                <ul class="content-list">
+                  <li class="list-item">
+                    Перша частина
+                    <p>- загальна розминка</p>
+                  </li>
+
+                  <li class="list-item">
+                    Друга частина
+                    <p>- cпеціальна розминка</p>
+                    <p>- підвідні вправи</p>
+                    <p>- імітація</p>
+                  </li>
+
+                  <li class="list-item">
+                    Третя частина
+                    <p>- розминка на корті</p>
+                    <p>- гра з корзиною</p>
+                    <p>- гра один з одним</p>
+                    <p>- подача</p>
+                    <p>- гра на рахунок</p>
+                  </li>
+
+                  <li class="list-item">
+                    Четверта частина
+                    <p>- Вправи на розслаблення</p>
+                  </li>
+                </ul>
+                <!-- <div class="main-button">
+                  <a href="#">Дивитись розклад</a>
+                </div> -->
               </article>
             </section>
           </div>
@@ -364,26 +439,24 @@ https://templatemo.com/tm-548-training-studio
           <div class="col-lg-6 offset-lg-3">
             <div class="section-heading dark-bg">
               <h2>
-                Classes
-                <em>Schedule</em>
+                Загальний
+                <em>розклад</em>
               </h2>
               <img src="assets/images/line-dec.png" alt="" />
-              <p>
-                Nunc urna sem, laoreet ut metus id, aliquet consequat magna. Sed viverra ipsum dolor, ultricies
-                fermentum massa consequat eu.
-              </p>
+              <p>Загальний розклад тринувань на неділю.</p>
             </div>
           </div>
         </div>
+
         <div class="row">
           <div class="col-lg-12">
             <div class="filters">
               <ul class="schedule-filter">
-                <li class="active" data-tsfilter="monday">Monday</li>
-                <li data-tsfilter="tuesday">Tuesday</li>
-                <li data-tsfilter="wednesday">Wednesday</li>
-                <li data-tsfilter="thursday">Thursday</li>
-                <li data-tsfilter="friday">Friday</li>
+                <li class="active" data-tsfilter="monday">Понеділок</li>
+                <li data-tsfilter="tuesday">Вівторок</li>
+                <li data-tsfilter="wednesday">Середа</li>
+                <li data-tsfilter="thursday">Четвер</li>
+                <li data-tsfilter="friday">П'ятниця</li>
               </ul>
             </div>
           </div>
@@ -436,13 +509,13 @@ https://templatemo.com/tm-548-training-studio
           <div class="col-lg-6 offset-lg-3">
             <div class="section-heading">
               <h2>
-                Expert
-                <em>Trainers</em>
+                Наші
+                <em>Тренери</em>
               </h2>
               <img src="assets/images/line-dec.png" alt="" />
               <p>
-                Nunc urna sem, laoreet ut metus id, aliquet consequat magna. Sed viverra ipsum dolor, ultricies
-                fermentum massa consequat eu.
+                Наша команда складається з досвідчених та сертифікованих фахівців, які присвятили себе професійному
+                тенісу.
               </p>
             </div>
           </div>
@@ -451,16 +524,19 @@ https://templatemo.com/tm-548-training-studio
           <div class="col-lg-4">
             <div class="trainer-item">
               <div class="image-thumb">
-                <img src="assets/images/first-trainer.jpg" alt="" />
+                <img src="assets/images/treners/evgen.jpg" alt="" />
               </div>
               <div class="down-content">
-                <span>Strength Trainer</span>
-                <h4>Bret D. Bowers</h4>
+                <span>Головний тренер</span>
+                <h4>Eugene Tseplyayev</h4>
                 <p>
                   Bitters cliche tattooed 8-bit distillery mustache. Keytar succulents gluten-free vegan church-key
                   pour-over seitan flannel.
                 </p>
-                <ul class="social-icons">
+                <div class="main-button">
+                  <a href="./assets/images/pdf/Tseplyayev Yevgen CV.pdf" target="_blank">Детальнійше</a>
+                </div>
+                <!-- <ul class="social-icons">
                   <li>
                     <a href="#"><i class="fa fa-facebook"></i></a>
                   </li>
@@ -473,11 +549,11 @@ https://templatemo.com/tm-548-training-studio
                   <li>
                     <a href="#"><i class="fa fa-behance"></i></a>
                   </li>
-                </ul>
+                </ul> -->
               </div>
             </div>
           </div>
-          <div class="col-lg-4">
+          <!-- <div class="col-lg-4">
             <div class="trainer-item">
               <div class="image-thumb">
                 <img src="assets/images/second-trainer.jpg" alt="" />
@@ -505,8 +581,8 @@ https://templatemo.com/tm-548-training-studio
                 </ul>
               </div>
             </div>
-          </div>
-          <div class="col-lg-4">
+          </div> -->
+          <!-- <div class="col-lg-4">
             <div class="trainer-item">
               <div class="image-thumb">
                 <img src="assets/images/third-trainer.jpg" alt="" />
@@ -534,17 +610,89 @@ https://templatemo.com/tm-548-training-studio
                 </ul>
               </div>
             </div>
-          </div>
+          </div> -->
         </div>
       </div>
     </section>
     <!-- ***** Testimonials Ends ***** -->
 
+    <!-- ***** GALLERY ***** -->
+    <section class="section" id="gallery">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 offset-lg-3">
+            <div class="section-heading">
+              <h2>
+                наша
+                <em>галерея</em>
+              </h2>
+              <!-- <img src="assets/images/line-dec.png" alt="waves" />
+              <p>НАШІ ГРУППИ</p> -->
+            </div>
+          </div>
+        </div>
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img
+                src="https://img.olympics.com/images/image/private/t_s_16_9_g_auto/t_s_w960/f_auto/primary/oekmp5nsj2oqpwnmotxm"
+                alt=""
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="https://empiresandpuzzles.ru/wp-content/uploads/2021/04/tennis-emp-logo.jpg?v=1618844372"
+                alt=""
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2RGxReWIbgtvmqqtZ0XD_89aj8RQ8L2bIzA&s"
+                alt=""
+              />
+            </div>
+            <div class="swiper-slide">
+              <img src="https://opis-cdn.tinkoffjournal.ru/mercury/how-to-watch-tennis-in.fhbpqngbt41d..jpg" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfIU9eyCHsutqvRgTlLYp7K0V3mxsBJ3nZvw&s"
+                alt=""
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="https://media.cdnbb8.com/image_source/deal_gallery/2024-10/05ed50da-d00f-44d8-8b65-b08dfc0d7134.jpeg"
+                alt=""
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="https://media.cdnbb8.com/image_source/deal_gallery/2024-10/88babaab-fd8a-48d8-a5ea-91f8936b0e23.jpeg"
+                alt=""
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Court_18_long_view.JPG/1200px-Court_18_long_view.JPG"
+                alt=""
+              />
+            </div>
+            <div class="swiper-slide">
+              <img src="https://irecommend.ru/sites/default/files/product-images/15672/tennis.jpg" alt="" />
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </section>
+    <!-- ***** GALLERY Ends ***** -->
+
     <!-- ***** Contact Us Area Starts ***** -->
     <section class="section" id="contact-us">
       <div class="container-fluid">
         <div class="row">
-          <div class="col-lg-6 col-md-6 col-xs-12">
+          <!-- <div class="col-lg-6 col-md-6 col-xs-12">
             <div id="map">
               <iframe
                 src="https://maps.google.com/maps?q=Av.+L%C3%BAcio+Costa,+Rio+de+Janeiro+-+RJ,+Brazil&t=&z=13&ie=UTF8&iwloc=&output=embed"
@@ -555,8 +703,9 @@ https://templatemo.com/tm-548-training-studio
                 allowfullscreen
               ></iframe>
             </div>
-          </div>
-          <div class="col-lg-6 col-md-6 col-xs-12">
+          </div> -->
+          <!-- <div class="col-lg-6 col-md-6 col-xs-12 marginForm"> -->
+          <div class="col-lg-6 marginForm">
             <div class="contact-form">
               <form id="order_form" action="" method="post">
                 <div class="row">
@@ -587,11 +736,11 @@ https://templatemo.com/tm-548-training-studio
                       <input name="subject" type="text" id="subject" placeholder="Subject" />
                     </fieldset>
                   </div> -->
-                  <!-- <div class="col-lg-12">
+                  <div class="col-lg-12">
                     <fieldset>
-                      <textarea name="message" rows="6" id="message" placeholder="Message" required=""></textarea>
+                      <textarea name="message" rows="6" id="message" placeholder="Message"></textarea>
                     </fieldset>
-                  </div> -->
+                  </div>
                   <div class="col-lg-12">
                     <fieldset>
                       <button type="submit" id="form-submit" class="main-button">Send Message</button>
@@ -640,9 +789,38 @@ https://templatemo.com/tm-548-training-studio
     <script src="assets/js/imgfix.min.js"></script>
     <script src="assets/js/mixitup.js"></script>
     <script src="assets/js/accordions.js"></script>
-    <script src="assets/js/formToTg.js"></script>
 
     <!-- Global Init -->
     <script src="assets/js/custom.js"></script>
+
+    <!-- Telegram JS -->
+    <script src="assets/js/formToTg.js"></script>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      const swiper = new Swiper('.mySwiper', {
+        slidesPerView: 1, // Показывать 3 слайда одновременно на больших экранах
+        spaceBetween: 10, // Расстояние между слайдами
+        breakpoints: {
+          // На мобильных устройствах (991px и меньше)
+          991: {
+            slidesPerView: 3, // Отображать по одному слайду
+          },
+        },
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true, // Делаем точки пагинации кликабельными
+        },
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+        loop: true, // Позволяет бесконечно пролистывать все слайды
+        autoplay: true,
+      });
+    </script>
   </body>
 </html>
