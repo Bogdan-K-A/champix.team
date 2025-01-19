@@ -1415,6 +1415,40 @@ responsive
   }
 }
 
+@media (max-width: 991px) {
+  .mobile-tabs {
+    display: block;
+  }
+  .desctop-tabs {
+    display: none;
+  }
+}
+
+@media (min-width: 991px) {
+  .mobile-tabs {
+    display: none !important;
+  }
+  .desctop-tabs {
+    display: block;
+  }
+}
+
+.accordion-content {
+  display: none; /* Контент скрыт по умолчанию */
+  margin-top: 10px;
+}
+
+.accordion-toggle {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.title-margin {
+  margin-top: 15px;
+}
+
 @media (max-width: 991px) and (min-width: 765px) {
   .header-area .main-nav .logo {
     width: 150px !important;

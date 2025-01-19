@@ -2,6 +2,19 @@
   'use strict';
 
   $(function () {
+    $('.accordion-toggle').on('click', function (e) {
+      e.preventDefault();
+
+      const content = $(this).next('.accordion-content');
+
+      // Скрыть другие секции
+      $('.accordion-content').not(content).slideUp();
+      // Переключить текущую
+      content.slideToggle();
+    });
+  });
+
+  $(function () {
     $('#tabs').tabs();
   });
 
