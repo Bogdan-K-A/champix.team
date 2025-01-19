@@ -9,6 +9,7 @@
       href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap"
       rel="stylesheet"
     />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
 
     <title>Training Studio - Free CSS Template</title>
     <!--
@@ -72,6 +73,28 @@ https://templatemo.com/tm-548-training-studio
                 <li class="scroll-to-section"><a href="#contact-us">Контакти</a></li>
                 <li class="scroll-to-section hidden">
                   <a class="phone" href="tel:+491748547762">+49 1748547762</a>
+                </li>
+                <li class="scroll-to-section">
+                  <div class="social-flex">
+                    <div class="social-item">
+                      <a href="#" target="_blank" rel="noopener noreferrer">
+                        <svg class="icon telegram">
+                          <use href="/assets/images/icons/symbol-defs.svg#telegram"></use>
+                        </svg>
+                      </a>
+                    </div>
+                    <div class="social-item">
+                      <a
+                        href="https://www.instagram.com/tseplyayeveugene?igsh=MWVrbXkzdDQ2Y2F1Ng=="
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <svg class="icon instagram">
+                          <use href="/assets/images/icons/symbol-defs.svg#instagram"></use>
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
                 </li>
                 <!-- языки -->
                 <div class="nav-item dropdown">
@@ -604,47 +627,81 @@ https://templatemo.com/tm-548-training-studio
           <div class="col-lg-12">
             <div class="filters">
               <ul class="schedule-filter">
-                <li class="active" data-tsfilter="monday">Понеділок</li>
-                <li data-tsfilter="tuesday">Вівторок</li>
-                <li data-tsfilter="wednesday">Середа</li>
+                <li class="active" data-tsfilter="saturday">Субота</li>
+                <li data-tsfilter="sunday">Неділя</li>
+                <!-- <li class="active" data-tsfilter="monday">Понеділок</li>
+                <li data-tsfilter="tuesday">Вівторок</li> -->
+                <!-- <li data-tsfilter="wednesday">Середа</li>
                 <li data-tsfilter="thursday">Четвер</li>
-                <li data-tsfilter="friday">П'ятниця</li>
+                <li data-tsfilter="friday">П'ятниця</li> -->
               </ul>
             </div>
           </div>
           <div class="col-lg-10 offset-lg-1">
             <div class="schedule-table filtering">
               <table>
+                <thead>
+                  <tr>
+                    <td class="day-time">Години занять</td>
+                    <td class="day-time">Корт 1</td>
+                    <td class="day-time">Корт 2</td>
+                  </tr>
+                </thead>
                 <tbody>
                   <tr>
-                    <td class="day-time">Fitness Class</td>
-                    <td class="monday ts-item show" data-tsmeta="monday">10:00AM - 11:30AM</td>
-                    <td class="tuesday ts-item" data-tsmeta="tuesday">2:00PM - 3:30PM</td>
-                    <td>William G. Stewart</td>
+                    <td class="day-time">9:00 - 10:00</td>
+                    <td class="day-time"></td>
+                    <td class="day-time"></td>
                   </tr>
                   <tr>
-                    <td class="day-time">Muscle Training</td>
-                    <td class="friday ts-item" data-tsmeta="friday">10:00AM - 11:30AM</td>
-                    <td class="thursday friday ts-item" data-tsmeta="thursday" data-tsmeta="friday">2:00PM - 3:30PM</td>
-                    <td>Paul D. Newman</td>
+                    <td class="day-time">10:00 - 11:00</td>
+                    <td class="day-time"></td>
+                    <td class="day-time"></td>
                   </tr>
                   <tr>
-                    <td class="day-time">Body Building</td>
-                    <td class="tuesday ts-item" data-tsmeta="tuesday">10:00AM - 11:30AM</td>
-                    <td class="monday ts-item show" data-tsmeta="monday">2:00PM - 3:30PM</td>
-                    <td>Boyd C. Harris</td>
+                    <td class="day-time">11:00 - 12:00</td>
+                    <td class="day-time kidsPro" rowspan="3">Kids/pro</td>
+                    <td class="day-time bebyTenis" rowspan="2">Baby/tennis</td>
                   </tr>
                   <tr>
-                    <td class="day-time">Yoga Training Class</td>
-                    <td class="wednesday ts-item" data-tsmeta="wednesday">10:00AM - 11:30AM</td>
-                    <td class="friday ts-item" data-tsmeta="friday">2:00PM - 3:30PM</td>
-                    <td>Hector T. Daigle</td>
+                    <td class="day-time">12:00 - 13:00</td>
                   </tr>
                   <tr>
-                    <td class="day-time">Advanced Training</td>
-                    <td class="thursday ts-item" data-tsmeta="thursday">10:00AM - 11:30AM</td>
-                    <td class="wednesday ts-item" data-tsmeta="wednesday">2:00PM - 3:30PM</td>
-                    <td>Bret D. Bowers</td>
+                    <td class="day-time">13:00 - 14:00</td>
+                    <td class="day-time"></td>
+                  </tr>
+                  <tr>
+                    <td class="day-time">14:00 - 15:00</td>
+                    <td class="day-time"></td>
+                    <td class="sunday ts-item bebyTenis" data-tsmeta="sunday" data-rowmeta="baby">Baby/tennis</td>
+                  </tr>
+                  <tr>
+                    <td class="day-time">15:00 - 16:00</td>
+                    <td class="sunday ts-item kidsPro" data-tsmeta="sunday" data-rowmeta="pro">Kids/pro</td>
+                    <td
+                      class="saturday ts-item bebyTenis show"
+                      data-tsmeta="saturday"
+                      data-rowmeta="baby"
+                      data-hiddenrowmeta="babyHidden"
+                    >
+                      Baby/tennis
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="day-time">16:00 - 17:00</td>
+                    <td class="saturday ts-item kidsPro show" data-tsmeta="saturday" data-rowmeta="pro">Kids/pro</td>
+                  </tr>
+                  <tr>
+                    <td class="day-time">17:00 - 18:00</td>
+                    <td class="day-time"></td>
+                  </tr>
+                  <tr>
+                    <td class="day-time">18:00 - 19:00</td>
+                    <td class="day-time"></td>
+                  </tr>
+                  <tr>
+                    <td class="day-time">19:00 - 20:00</td>
+                    <td class="day-time"></td>
                   </tr>
                 </tbody>
               </table>
@@ -691,20 +748,6 @@ https://templatemo.com/tm-548-training-studio
                 <div class="main-button">
                   <a href="./assets/images/pdf/Tseplyayev Yevgen CV.pdf" target="_blank">Детальнійше</a>
                 </div>
-                <!-- <ul class="social-icons">
-                  <li>
-                    <a href="#"><i class="fa fa-facebook"></i></a>
-                  </li>
-                  <li>
-                    <a href="#"><i class="fa fa-twitter"></i></a>
-                  </li>
-                  <li>
-                    <a href="#"><i class="fa fa-linkedin"></i></a>
-                  </li>
-                  <li>
-                    <a href="#"><i class="fa fa-behance"></i></a>
-                  </li>
-                </ul> -->
               </div>
             </div>
           </div>
@@ -724,20 +767,6 @@ https://templatemo.com/tm-548-training-studio
                 <div class="main-button">
                   <a href="#" target="_blank">Детальнійше</a>
                 </div>
-                <!-- <ul class="social-icons">
-                  <li>
-                    <a href="#"><i class="fa fa-facebook"></i></a>
-                  </li>
-                  <li>
-                    <a href="#"><i class="fa fa-twitter"></i></a>
-                  </li>
-                  <li>
-                    <a href="#"><i class="fa fa-linkedin"></i></a>
-                  </li>
-                  <li>
-                    <a href="#"><i class="fa fa-behance"></i></a>
-                  </li>
-                </ul> -->
               </div>
             </div>
           </div>
@@ -798,12 +827,7 @@ https://templatemo.com/tm-548-training-studio
                 alt=""
               />
             </div>
-            <div class="swiper-slide">
-              <img
-                src="https://empiresandpuzzles.ru/wp-content/uploads/2021/04/tennis-emp-logo.jpg?v=1618844372"
-                alt=""
-              />
-            </div>
+
             <div class="swiper-slide">
               <img
                 src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2RGxReWIbgtvmqqtZ0XD_89aj8RQ8L2bIzA&s"
@@ -851,19 +875,6 @@ https://templatemo.com/tm-548-training-studio
     <section class="section" id="contact-us">
       <div class="container-fluid">
         <div class="row">
-          <!-- <div class="col-lg-6 col-md-6 col-xs-12">
-            <div id="map">
-              <iframe
-                src="https://maps.google.com/maps?q=Av.+L%C3%BAcio+Costa,+Rio+de+Janeiro+-+RJ,+Brazil&t=&z=13&ie=UTF8&iwloc=&output=embed"
-                width="100%"
-                height="600px"
-                frameborder="0"
-                style="border: 0"
-                allowfullscreen
-              ></iframe>
-            </div>
-          </div> -->
-          <!-- <div class="col-lg-6 col-md-6 col-xs-12 marginForm"> -->
           <div class="col-lg-6 marginForm">
             <div class="contact-form">
               <form id="order_form" action="" method="post">
@@ -875,26 +886,16 @@ https://templatemo.com/tm-548-training-studio
                   </div>
                   <div class="col-md-6 col-sm-12">
                     <fieldset>
-                      <input name="phone" type="tel" placeholder="phone*" required="" />
-                    </fieldset>
-                  </div>
-                  <!-- <div class="col-md-6 col-sm-12">
-                    <fieldset>
                       <input
-                        name="email"
-                        type="text"
-                        id="email"
-                        pattern="[^ @]*@[^ @]*"
-                        placeholder="Your Email*"
+                        name="phone"
+                        type="tel"
+                        placeholder="phone*"
                         required=""
+                        onkeypress="return isNumberKey(event)"
                       />
                     </fieldset>
-                  </div> -->
-                  <!-- <div class="col-md-12 col-sm-12">
-                    <fieldset>
-                      <input name="subject" type="text" id="subject" placeholder="Subject" />
-                    </fieldset>
-                  </div> -->
+                  </div>
+
                   <div class="col-lg-12">
                     <fieldset>
                       <textarea name="message" rows="6" id="message" placeholder="Message"></textarea>
@@ -902,7 +903,7 @@ https://templatemo.com/tm-548-training-studio
                   </div>
                   <div class="col-lg-12">
                     <fieldset>
-                      <button type="submit" id="form-submit" class="main-button">Send Message</button>
+                      <button type="submit" id="form-submit" class="main-button">Залишити заявку</button>
                     </fieldset>
                   </div>
                 </div>
@@ -917,20 +918,26 @@ https://templatemo.com/tm-548-training-studio
     <!-- ***** Footer Start ***** -->
     <footer>
       <div class="container">
-        <div class="row">
-          <div class="col-lg-12">
-            <p>
-              Copyright &copy; 2020 Training Studio - Designed by
-              <a rel="nofollow" href="https://templatemo.com" class="tm-text-link" target="_parent">TemplateMo</a>
-              <br />
-
-              Distributed by
-              <a rel="nofollow" href="https://themewagon.com" class="tm-text-link" target="_blank">ThemeWagon</a>
-            </p>
-
-            <!-- You shall support us a little via PayPal to info@templatemo.com -->
-          </div>
-        </div>
+        <ul class="social-flex">
+          <li class="social-item">
+            <a href="#" target="_blank" rel="noopener noreferrer">
+              <svg class="icon telegram">
+                <use href="/assets/images/icons/symbol-defs.svg#telegram"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social-item">
+            <a
+              href="https://www.instagram.com/tseplyayeveugene?igsh=MWVrbXkzdDQ2Y2F1Ng=="
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <svg class="icon instagram">
+                <use href="/assets/images/icons/symbol-defs.svg#instagram"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
       </div>
     </footer>
 
