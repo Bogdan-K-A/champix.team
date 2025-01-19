@@ -978,7 +978,11 @@ schedule
 
 #schedule table tbody tr td {
   border-right: 1px solid #fff;
-  height: 100px;
+  height: 30px;
+}
+
+#schedule table thead tr td {
+  border-right: 1px solid #fff;
 }
 
 #schedule table tr td {
@@ -1407,12 +1411,57 @@ responsive
   margin-right: 10px;
 }
 
+.shedulHidden {
+  display: none;
+}
+
+.bebyTenis {
+  background: rgba(255, 0, 0, 0.15);
+}
+.kidsPro {
+  background: rgba(3, 255, 58, 0.15);
+}
+
 /* ----------------------------- МОИ МЕДИА СТИЛИ ---------------------------- */
 
 @media (min-width: 765px) {
   .phoneMobile {
     display: none;
   }
+}
+
+@media (max-width: 991px) {
+  .mobile-tabs {
+    display: block;
+  }
+  .desctop-tabs {
+    display: none;
+  }
+}
+
+@media (min-width: 991px) {
+  .mobile-tabs {
+    display: none !important;
+  }
+  .desctop-tabs {
+    display: block;
+  }
+}
+
+.accordion-content {
+  display: none; /* Контент скрыт по умолчанию */
+  margin-top: 10px;
+}
+
+.accordion-toggle {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.title-margin {
+  margin-top: 15px;
 }
 
 @media (max-width: 991px) and (min-width: 765px) {
@@ -1447,12 +1496,41 @@ responsive
     display: none;
   }
 
-  .logo-box {
-  }
-
   .header-area .main-nav .logo {
     width: 150px !important;
     margin-top: 20px;
     margin-right: 100%;
   }
+
+  .header-area .main-nav .social-flex {
+    background: #f7f7f7 !important;
+  }
+}
+
+.social-flex {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+
+.social-flex .social-item:not(:last-child) {
+  margin-right: 15px;
+}
+
+.icon {
+  width: 24px !important;
+  height: 24px !important;
+  transition: transform 0.3s ease;
+}
+
+.icon:hover {
+  transform: scale(1.2);
+}
+
+.telegram {
+  fill: #35a9da;
+}
+
+.instagram {
+  fill: #da0063;
 }

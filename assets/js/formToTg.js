@@ -1,16 +1,18 @@
-// <!-- /scripts внести перед закрывающим тегом <body/> -->
-//     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-//     <script src="formToTg.js"></script>
-
-const TOKEN = '6451110971:AAE8esedmIq_5d0PzVIlU3EpDdZWNYWVAw0';
-const CHAT_ID = '-1002097078768';
+const TOKEN = '7939174229:AAHN028UeGCRKJZxLcZVDglYfzLq8uZH4Fk';
+const CHAT_ID = '-1002412654982';
 const URI_API = `https://api.telegram.org/bot${TOKEN}/sendMessage`;
-// сделать или модалку или див что б при удачной отпраке вылазило сообщение
-const alertMessage = document.getElementById('alert'); //обращается по ID
+
+document.addEventListener('keypress', (e) => {
+  if (e.key === 'Enter') {
+    e.preventDefault();
+    document.getElementById('form-submit').click();
+  }
+});
 
 //  присваеивается к форме уникальный id="order_form"
 document.getElementById('order_form').addEventListener('submit', function (e) {
   e.preventDefault();
+
   // Тіло повідомлення
   let message = `<b>Заявка с сайта!</b>\n`;
   message += `<b>Имя: </b> ${this.name.value}\n`;
@@ -25,23 +27,21 @@ document.getElementById('order_form').addEventListener('submit', function (e) {
       text: message,
     })
     .then((res) => {
-      // страница благодарности
-      this.name.value = '';
-      this.phone.value = '';
-      alertMessage.innerHTML = 'Ваша заявка відправлена! Дякуємо!';
-      alertMessage.style.color = 'green';
-      alertMessage.style.display = 'block';
+      if (res.status === 200 && res.data.ok) {
+        // Успешная отправка
+        this.name.value = '';
+        this.phone.value = '';
+        this.message.value = '';
+
+        window.location.href = '/thanks.html'; // Перенаправление на страницу благодарности
+      } else {
+        // Ошибка обработки
+        throw new Error('Error sending message.');
+      }
     })
     .catch((err) => {
-      // ошибка
-      this.name.value = '';
-      this.phone.value = '';
-      alertMessage.innerHTML = 'Щось пішло не так!';
-      alertMessage.style.color = 'red';
-      alertMessage.style.display = 'block';
+      // Ошибка отправки
+      alert('Things have gone wrong. Try again.');
       console.warn(err);
-    })
-    .finally(() => {
-      console.log('finally');
     });
 });

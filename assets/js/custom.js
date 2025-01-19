@@ -1,6 +1,20 @@
 (function ($) {
   'use strict';
+  // кастомный акордион для показа контента
+  $(function () {
+    $('.accordion-toggle').on('click', function (e) {
+      e.preventDefault();
 
+      const content = $(this).next('.accordion-content');
+
+      // Скрыть другие секции
+      $('.accordion-content').not(content).slideUp();
+      // Переключить текущую
+      content.slideToggle();
+    });
+  });
+
+  // местный акордион для показа контента
   $(function () {
     $('#tabs').tabs();
   });
@@ -25,23 +39,72 @@
     }
   });
 
-  $('.schedule-filter li').on('click', function () {
-    var tsfilter = $(this).data('tsfilter');
-    $('.schedule-filter li').removeClass('active');
-    $(this).addClass('active');
-    if (tsfilter == 'all') {
-      $('.schedule-table').removeClass('filtering');
-      $('.ts-item').removeClass('show');
-    } else {
-      $('.schedule-table').addClass('filtering');
-    }
-    $('.ts-item').each(function () {
-      $(this).removeClass('show');
-      if ($(this).data('tsmeta') == tsfilter) {
-        $(this).addClass('show');
+  // РАСПИСАНИЕ
+  $(document).ready(function () {
+    // Обработчик кликов на элементы фильтра
+    $('.schedule-filter li').on('click', function () {
+      var tsfilter = $(this).data('tsfilter'); // Получаем выбранный день (saturday или sunday)
+
+      // Удаляем активный класс у всех кнопок фильтра и добавляем активный к текущему
+      $('.schedule-filter li').removeClass('active');
+      $(this).addClass('active');
+
+      // Сбрасываем объединения ячеек и скрываем все строки
+      $('.ts-item').removeClass('show').removeAttr('rowspan');
+
+      // Показываем строки для выбранного дня
+      $('.ts-item').each(function () {
+        var tsmeta = $(this).data('tsmeta'); // Получаем атрибут data-tsmeta у строки
+
+        // Если строка соответствует выбранному дню, показываем её
+        if (tsmeta === tsfilter) {
+          $(this).addClass('show'); // Добавляем класс show для видимости
+
+          // Устанавливаем rowspan для Baby/tennis и Kids/pro
+          if ($(this).data('rowmeta') === 'baby') {
+            $(this).attr('rowspan', '2');
+          } else if ($(this).data('rowmeta') === 'pro') {
+            $(this).attr('rowspan', '3');
+          }
+        }
+      });
+
+      // Обрабатываем скрытие элементов с data-hiddenrowmeta
+      if (tsfilter === 'sunday') {
+        $('[data-hiddenrowmeta="babyHidden"]').addClass('shedulHidden'); // Скрываем строку
+      } else if (tsfilter === 'saturday') {
+        $('[data-hiddenrowmeta="babyHidden"]').removeClass('shedulHidden'); // Показываем строку
       }
     });
+
+    // Инициализация (по умолчанию показываем субботу)
+    $('.schedule-filter li[data-tsfilter="saturday"]').click();
   });
+
+  // $('.schedule-filter li').on('click', function () {
+  //   var tsfilter = $(this).data('tsfilter');
+  //   $('.schedule-filter li').removeClass('active');
+  //   $(this).addClass('active');
+  //   if (tsfilter == 'all') {
+  //     $('.schedule-table').removeClass('filtering');
+  //     $('.ts-item').removeClass('show');
+  //   } else {
+  //     $('.schedule-table').addClass('filtering');
+  //   }
+  //   $('.ts-item').each(function () {
+  //     $(this).removeClass('show');
+
+  //     if ($(this).data('tsmeta') == tsfilter) {
+  //       $(this).addClass('show');
+  //     }
+
+  //     if ($(this).data('rowmeta') == tsfilter) {
+  //       $(this).removeAttr('rowspan'); // Убираем атрибут rowspan для остальных элементов
+  //     } else {
+  //       $(this).attr('rowspan', '2'); // Добавляем атрибут rowspan
+  //     }
+  //   });
+  // });
 
   // Window Resize Mobile Menu Fix
   mobileNav();
