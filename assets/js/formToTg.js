@@ -1,11 +1,6 @@
 /* -------------------------------- ОРИГИНАЛ -------------------------------- */
-// const TOKEN = '7939174229:AAHN028UeGCRKJZxLcZVDglYfzLq8uZH4Fk';
-// const CHAT_ID = '-1002412654982';
-// const URI_API = `https://api.telegram.org/bot${TOKEN}/sendMessage`;
-
-/* -------------------------------- ТЕСТОВЫЙ -------------------------------- */
-const TOKEN = '6451110971:AAE8esedmIq_5d0PzVIlU3EpDdZWNYWVAw0';
-const CHAT_ID = '-1002097078768';
+const TOKEN = '7939174229:AAHN028UeGCRKJZxLcZVDglYfzLq8uZH4Fk';
+const CHAT_ID = '-1002412654982';
 const URI_API = `https://api.telegram.org/bot${TOKEN}/sendMessage`;
 
 let formLoadTime = Date.now();
