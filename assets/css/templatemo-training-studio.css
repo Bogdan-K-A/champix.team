@@ -646,7 +646,7 @@ header
   }
   .header-area .main-nav .nav li:last-child a:hover,
   .header-area .main-nav .nav li:last-child:hover a {
-    background-color: var(--orange) !important;
+    background-color: var(--orange);
     color: #fff !important;
   }
   .header-area.header-sticky .nav {
@@ -711,6 +711,7 @@ header
 @media (min-width: 767px) {
   .header-area .main-nav .nav {
     display: flex !important;
+    justify-content: center;
   }
 }
 
