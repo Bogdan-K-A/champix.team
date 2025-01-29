@@ -408,15 +408,20 @@ header
   color: #fff;
 }
 
-.header-area .main-nav .dropdown-toggle {
+/* .dropdown-toggle {
   color: #fff;
-}
+} */
 
-.header-area .main-nav .dropdown-menu li a {
+.dropdown-menu li a {
   color: #232d39;
 }
-.header-area .main-nav .dropdown-menu {
+
+.dropdown-menu {
   min-width: 60px;
+}
+
+.dropdown-item {
+  padding: 0.25rem 1.3rem !important;
 }
 
 /* .header-area .main-nav .nav li:last-child a {
@@ -641,7 +646,7 @@ header
   }
   .header-area .main-nav .nav li:last-child a:hover,
   .header-area .main-nav .nav li:last-child:hover a {
-    background-color: var(--orange) !important;
+    background-color: var(--orange);
     color: #fff !important;
   }
   .header-area.header-sticky .nav {
@@ -706,6 +711,7 @@ header
 @media (min-width: 767px) {
   .header-area .main-nav .nav {
     display: flex !important;
+    justify-content: center;
   }
 }
 
@@ -993,6 +999,12 @@ schedule
   letter-spacing: 0.25px;
 }
 
+.schedule-text {
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
+}
+
 .schedule-table.filtering .ts-item {
   opacity: 0;
   transition: all 0.5s;
@@ -1066,6 +1078,12 @@ trainers
   border-radius: 5px;
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
   padding: 40px;
+  min-height: 690px;
+
+  display: flex;
+  flex-direction: column; /* Устанавливает элементы внутри вертикально */
+  justify-content: flex-start; /* Разделяет содержимое равномерно */
+  align-items: center; /* Центрует содержимое по горизонтали */
 }
 
 #trainers .trainer-item img {
@@ -1424,25 +1442,22 @@ responsive
 
 /* ----------------------------- МОИ МЕДИА СТИЛИ ---------------------------- */
 
-@media (min-width: 765px) {
-  .phoneMobile {
-    display: none;
-  }
-}
-
 @media (max-width: 991px) {
   .mobile-tabs {
     display: block;
   }
+
   .desctop-tabs {
     display: none;
   }
 }
 
 @media (min-width: 991px) {
+  .lengBarMobile,
   .mobile-tabs {
     display: none !important;
   }
+
   .desctop-tabs {
     display: block;
   }
@@ -1469,6 +1484,10 @@ responsive
     width: 150px !important;
   }
 
+  .lengBarMobile {
+    display: none;
+  }
+
   .phoneMobile {
     display: none;
   }
@@ -1486,13 +1505,27 @@ responsive
   }
 }
 
+@media (min-width: 765px) {
+  .phoneMobile {
+    display: none;
+  }
+}
+
 @media (max-width: 765px) and (min-width: 0px) {
+  .input-group-append .btn,
+  .input-group-prepend .btn {
+    position: absolute;
+    top: -55px;
+    left: 30px;
+    color: #232d39;
+  }
+
   .header-area .main-nav {
     display: block !important;
   }
 
-  .hidden,
-  .nav-item {
+  /* .nav-item, */
+  .hidden {
     display: none;
   }
 
@@ -1502,8 +1535,11 @@ responsive
     margin-right: 100%;
   }
 
-  .header-area .main-nav .social-flex {
-    background: #f7f7f7 !important;
+  .header-area .main-nav .nav li:last-child {
+    background-color: #f7f7f7 !important;
+  }
+  .header-area .main-nav .nav .social-flex .social-item a {
+    background-color: #f7f7f7 !important;
   }
 }
 
