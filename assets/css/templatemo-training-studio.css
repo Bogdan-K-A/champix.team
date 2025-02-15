@@ -1464,7 +1464,7 @@ responsive
 }
 
 .accordion-content {
-  display: none; /* Контент скрыт по умолчанию */
+  /* display: none; Контент скрыт по умолчанию */
   margin-top: 10px;
 }
 
